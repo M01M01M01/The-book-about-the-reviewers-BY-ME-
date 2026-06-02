@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Book About the Reviewers BY ME!</title>
+    <style>
+        /* Sci-Fi / Arcade Neon Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+        }
+
+        body {
+            background-color: #0d0e15;
+            color: #e0e0ff;
+            line-height: 1.8;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(180px, #1a1c2e, #0d0e15);
+            text-align: center;
+            padding: 4rem 2rem;
+            border-bottom: 4px solid #39ff14;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        header h2 {
+            font-size: 1.5rem;
+            color: #ff007f;
+            text-shadow: 0 0 10px #ff007f;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Character Loadout Grid */
+        .roster-title {
+            text-align: center;
+            color: #ffff00;
+            margin: 2rem 0 1rem 0;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+
+        .roster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 4rem;
+        }
+
+        .char-card {
+            background: #16192b;
+            border: 2px solid #4d4f7c;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .char-card:hover {
+            border-color: #00ffff;
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+        }
+
+        .char-name {
+            font-weight: bold;
+            color: #ff007f;
+            margin-bottom: 0.5rem;
+        }
+
+        .char-weapon {
+            font-size: 0.9rem;
+            color: #39ff14;
+        }
+
+        /* Story Layout */
+        .story-section {
+            background: #111424;
+            border-left: 5px solid #ff007f;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            border-radius: 0 15px 15px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .story-section h3 {
+            font-size: 2rem;
+            color: #39ff14;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 5px #39ff14;
+            border-bottom: 2px dashed #4d4f7c;
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        /* Dialogue styling */
+        p:has(strong), .dialogue {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            border-left: 3px solid #00ffff;
+        }
+
+        .cliffhanger {
+            color: #ff007f;
+            font-weight: bold;
+            font-size: 1.4rem;
+            text-align: center;
+            text-transform: uppercase;
+            animation: blink 1.5s infinite;
+            margin-top: 2rem;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: #4d4f7c;
+            font-size: 0.8rem;
+            border-top: 1px solid #16192b;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>The Book About the Reviewers</h1>
+        <h2>BY ME!</h2>
+    </header>
+
+    <div class="container">
+
+        <!-- Character Status / Loadout Screen -->
+        <h2 class="roster-title">⚔️ Chosen Squad Loadout ⚔️</h2>
+        <div class="roster-grid">
+            <div class="char-card">
+                <div class="char-name">Cobalt</div>
+                <div class="char-weapon">🧁 Muffin Launcher</div>
+            </div>
+            <div class="char-card">
+                <div class="char-name">Assassin</div>
+                <div class="char-weapon">🗡️ Katana & Mirror Shield</div>
+            </div>
+            <div class="char-card">
+                <div class="char-name">Bigback67</div>
+                <div class="char-weapon">🧱 Unsmelted Iron Sword</div>
+            </div>
+            <div class="char-card">
+                <div class="char-name">ME (The Author)</div>
+                <div class="char-weapon">💥 Big Nate Obliterator</div>
+            </div>
+            <div class="char-card">
+                <div class="char-name">Mr. Ham</div>
+                <div class="char-weapon">🐷 The Piganator</div>
+            </div>
+            <div class="char-card">
+                <div class="char-name">Mr. Fun Computer</div>
+                <div class="char-weapon">💻 The Hacker</div>
+            </div>
+            <div class="char-card">
+                <div class="char-name">Kaiden</div>
+                <div class="char-weapon">🔫 Helpful Blaster</div>
+            </div>
+            <div class="char-card">
+                <div class="char-name">Sash</div>
+                <div class="char-weapon">🚀 Kobo Bazooka</div>
+            </div>
+            <div class="char-card">
+                <div class="char-name">CRU5H</div>
+                <div class="char-weapon">💪 Tactician / Fighter</div>
+            </div>
+        </div>
+
+        <!-- Part 1 -->
+        <section class="story-section">
+            <h3>PART 1: The Invasion</h3>
+            <p>One day, Cobalt was working at her café when she heard a strange noise outside. Curious, she looked through the window and froze. A UFO was hovering above the town. Suddenly, aliens began pouring out of it.</p>
+            
+            <p class="dialogue">"Aliens are attacking!" Cobalt shouted.</p>
+            
+            <p>She immediately spread the word to all her customers.</p>
+            
+            <p class="dialogue">"EVERYONE LEAVE NOW!!! ALIENS ARE ATTACKING AND YOU ALL NEED TO GET OUT OF HERE!!! DON'T WORRY ABOUT PAYING—YOU NEVER DO ANYWAY!!!"</p>
+            
+            <p>The customers quickly ran out of the café in a panic.</p>
+            
+            <p>Meanwhile, Assassin was busy writing the sequel to his first book, <i>"The day the Zombies Attacked"</i>. So, when he heard the news, without hesitation, he decided to help.</p>
+            
+            <p class="dialogue">"I'll spread the word," he said.</p>
+            
+            <p>He rushed back to his house and then went all around town, warning everyone he could find. Most people were terrified. However, Mr. Fun Computer remained surprisingly calm. He was in the middle of writing a review when he heard what was happening. Even so, he stopped what he was doing and helped spread the news.</p>
+            
+            <p>CRU5H, a less popular reviewer but still a good one, heard the news as well. Unlike most townspeople, he wasn't focused on running away.</p>
+            
+            <p class="dialogue">"I think we should fight back," he said.</p>
+            
+            <p>The others looked at him. Maybe he had a point.</p>
+
+            <p>They all headed to Bigback67's house because he was a famous gamer and might know something about the aliens. When they arrived, they found him livestreaming a Fortnite match on his channel, Bigback Gaming. Everyone was relieved to see him.</p>
+            
+            <p>As it turned out, Bigback67 was also an alien expert. Even better, he had an entire collection of weapons ready to use.</p>
+            
+            <p class="dialogue">"Choose your weapon!" Bigback shouted.</p>
+            
+            <p>Cobalt picked the Muffin Launcher. As a cook, she knew that aliens hate muffins. Assassin chose a katana and a Mirror Shield, which could reflect blasts from alien weapons. Bigback decided to join the fight himself, wielding the legendary Minecraft Unsmelted Iron Sword.</p>
+            
+            <p>Plenty of other people showed up to help, but I'll only mention the important ones.</p>
+            
+            <p>Me (because I wrote the book) arrived carrying the Big Nate Obliterator. Why? Because Big Nate is way too tough for any alien to handle. Mr. Ham grabbed the Piganator. Mr. Fun Computer chose the Hacker. Kaiden picked the Helpful Blaster, powered by Helpfuls. Sash carried the Kobo Bazooka (nobody really knew how it worked, but it looked awesome). Many others joined the team as well.</p>
+            
+            <p>The group marched out of Bigback's house. In their heads, it felt like <i>Thunderstruck</i> by AC/DC was blasting as they walked in slow motion like they were in an epic edit.</p>
+            
+            <p>Suddenly, an alien leaped out from behind them! Before anyone could react, it grabbed Cobalt and carried her away into the darkness.</p>
+            
+            <p class="cliffhanger">"COBALT!" everyone shouted.</p>
+        </section>
+
+        <!-- Part 2 -->
+        <section class="story-section">
+            <h3>PART 2: Into the Mothership</h3>
+            <p>The group froze in shock, the epic AC/DC music fading in their heads like a scratched record. Cobalt, their primary source of anti-alien muffin defense, was gone.</p>
+            
+            <p class="dialogue">"We need a plan, and we need it now!" Assassin yelled, drawing his katana. The blade caught the eerie green glow of the UFO above.</p>
+            
