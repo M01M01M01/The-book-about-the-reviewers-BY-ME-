@@ -3,204 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Book About the Reviewers BY ME!</title>
+    <title>The Book About the Reviewers</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Courier New', Courier, monospace, sans-serif;
+        :root {
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --accent-color: #58a6ff;
+            --card-bg: #161b22;
+            --border-color: #30363d;
         }
         body {
-            background-color: #0d0e15;
-            color: #e0e0ff;
-            line-height: 1.8;
-            padding: 0;
-        }
-        header {
-            background: linear-gradient(180px, #1a1c2e, #0d0e15);
-            text-align: center;
-            padding: 4rem 2rem;
-            border-bottom: 4px solid #39ff14;
-        }
-        header h1 {
-            font-size: 3rem;
-            color: #00ffff;
-            text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-        }
-        header h2 {
-            font-size: 1.5rem;
-            color: #ff007f;
-            text-shadow: 0 0 10px #ff007f;
-            letter-spacing: 2px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
         }
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 2rem;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
         }
-        .roster-title {
-            text-align: center;
-            color: #ffff00;
-            margin: 2rem 0 1rem 0;
-            font-size: 1.8rem;
-            text-transform: uppercase;
+        h1 {
+            color: var(--accent-color);
+            font-size: 2.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 0;
         }
-        .roster-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 4rem;
+        .meta {
+            font-style: italic;
+            color: #8b949e;
+            margin-bottom: 30px;
         }
-        .char-card {
-            background: #16192b;
-            border: 2px solid #4d4f7c;
-            border-radius: 8px;
-            padding: 1rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        .char-card:hover {
-            border-color: #00ffff;
-            transform: translateY(-3px);
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
-        }
-        .char-name {
-            font-weight: bold;
-            color: #ff007f;
-            margin-bottom: 0.5rem;
-        }
-        .char-weapon {
-            font-size: 0.9rem;
-            color: #39ff14;
-        }
-        .story-section {
-            background: #111424;
-            border-left: 5px solid #ff007f;
-            padding: 2.5rem;
-            margin-bottom: 3rem;
-            border-radius: 0 15px 15px 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-            white-space: pre-line;
+        p {
             font-size: 1.1rem;
-            text-align: left;
+            margin-bottom: 20px;
+            text-align: justify;
         }
-        footer {
-            text-align: center;
-            padding: 3rem;
-            color: #4d4f7c;
-            font-size: 0.8rem;
-            border-top: 1px solid #16192b;
+        .interrupted {
+            font-style: italic;
+            color: #f85149;
+            border-left: 3px solid #f85149;
+            padding-left: 10px;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>The Book About the Reviewers</h1>
-        <h2>BY ME!</h2>
-    </header>
-    <div class="container">
-        <h2 class="roster-title">⚔️ Chosen Squad Loadout ⚔️</h2>
-        <div class="roster-grid">
-            <div class="char-card"><div class="char-name">CRU5H (You)</div><div class="char-weapon">💥 Big Nate Obliterator</div></div>
-            <div class="char-card"><div class="char-name">Cobalt</div><div class="char-weapon">🧁 Muffin Launcher</div></div>
-            <div class="char-card"><div class="char-name">Assassin</div><div class="char-weapon">🗡️ Katana & Mirror Shield</div></div>
-            <div class="char-card"><div class="char-name">Bigback67</div><div class="char-weapon">🧱 Unsmelted Iron Sword</div></div>
-            <div class="char-card"><div class="char-name">ME (The Author)</div><div class="char-weapon">📚 Storyteller / Ally</div></div>
-            <div class="char-card"><div class="char-name">Mr. Ham</div><div class="char-weapon">🐷 The Piganator</div></div>
-            <div class="char-card"><div class="char-name">Mr. Fun Computer</div><div class="char-weapon">💻 The Hacker</div></div>
-            <div class="char-card"><div class="char-name">Kaiden</div><div class="char-weapon">🔫 Helpful Blaster</div></div>
-            <div class="char-card"><div class="char-name">Sash</div><div class="char-weapon">🚀 Kobo Bazooka</div></div>
-        </div>
-        <section class="story-section">The book about the reviewers BY ME!
-One day, Cobalt was working at her café when she heard a strange noise outside. Curious, she looked through the window and froze.
-A UFO was hovering above the town.
-Suddenly, aliens began pouring out of it.
-"Aliens are attacking!" Cobalt shouted.
-She immediately spread the word to all her customers.
-"EVERYONE LEAVE NOW!!! ALIENS ARE ATTACKING AND YOU ALL NEED TO GET OUT OF HERE!!! DON'T WORRY ABOUT PAYING—YOU NEVER DO ANYWAY!!!"
-The customers quickly ran out of the café in a panic.
-Meanwhile, Assasin was busy writing the sequel to his first book, <i> The day the Zombies Attacked”</i>, So, when he heard the news. Without hesitation, he decided to help.
-"I'll spread the word," he said.
-He rushed back to his house and then went all around town, warning everyone he could find. Most people were terrified.
-However, Mr. Fun Computer remained surprisingly calm. He was in the middle of writing a review when he heard what was happening. Even so, he stopped what he was doing and helped spread the news.
-CRU5H, a less popular reviewer but still a good one, heard the news as well. Unlike most townspeople, he wasn't focused on running away.
-"I think we should fight back," he said.
-The others looked at him. Maybe he had a point.
 
-They all headed to Bigback67's house because he was a famous gamer and might know something about the aliens. When they arrived, they found him livestreaming a Fortnight match on his channel, Bigback Gaming. Everyone was relieved to see him.
-As it turned out, Bigback67 was also an alien expert. Even better, he had an entire collection of weapons ready to use.
-"Choose your weapon!" Bigback shouted.
-Cobalt picked the Muffin Launcher. As a cook, she knew that aliens hate muffins.
-Assassin chose a katana and a Mirror Shield, which could reflect blasts from alien weapons.
-Bigback decided to join the fight himself, wielding the legendary Minecraft Unsmelted Iron Sword.
-Plenty of other people showed up to help, but I'll only mention the important ones.
-Me (because I wrote the book) arrived carrying the Big Nate Obliterator. Why? Because Big Nate is way too tuff for any alien to handle. Mr. Ham grabbed the Piganator. Mr. Fun Computer chose the Hacker. Kaiden picked the Helpful Blaster, powered by Helpfuls. Sash carried the Kobo Bazooka (nobody really knew how it worked, but it looked awesome). Many others joined the team as well.
-The group marched out of Bigback's house. In their heads, it felt like Thunderstruck by AC/DC was blasting as they walked in slow motion like they were in an epic edit.
-Suddenly, an alien leaped out from behind them!
-Before anyone could react, it grabbed Cobalt and carried her away into the darkness.
-"COBALT!" everyone shouted.
-PART 2
-The group froze in shock, the epic AC/DC music fading in their heads like a scratched record. Cobalt, their primary source of anti-alien muffin defense, was gone.
-"We need a plan, and we need it now!" Assasin yelled, drawing his katana. The blade caught the eerie green glow of the UFO above.
-"My stream chat is going wild!" Bigback67 shouted, holding up his phone. "They're saying the aliens took her toward the town square! They're setting up a main base there!"
-"Then that's where we go," CRU5H said, gripping the Big Nate Obliterator. "Nobody kidnaps our barista. Let's move!"
+<div class="container">
+    <h1>The Book About the Reviewers</h1>
+    <div class="meta">Written by Me</div>
 
-The group sprinted into the heart of the city, and the scene was absolute chaos. Aliens were flooding the streets like a broken fire hydrant, and the sound of terrified townspeople screaming filled the air.
-“HELP ME!!!” someone yelled from an overturned car.
-Towering over the skyscrapers was the giant mothership UFO. Buzzing around it like angry hornets were dozens of smaller shuttle UFOs, hauling up stolen Earth supplies—and captured people.
-Suddenly, Mr. Ham squinted, his eyes locking onto one specific shuttle rising rapidly into the sky. Through the glass cockpit, a familiar apron was visible.
-“COBALT'S IN THERE!” Mr. Ham yelled, pointing his Piganator at the sky. “LET’S GO! AS FAST AS WE CAN!”
-“Everyone, get in the car!” Bigback67 ordered, pointing to a nearby Jurassic park like jeep that was already starting to lift off the ground.
-The tractor beaming from the giant UFO gripped the vehicle, pulling it up into the sky like a giant, invisible elevator. They buckled up just as the car flew through the hangar doors and slammed down right in the glowing, high-tech core of the main mothership.
-They scrambled out of the car, weapons ready. Looking down a long, metallic hallway, they spotted Cobalt. She was trapped on a hovering stretcher, being pulled away by a couple of alien guards.
-“There she is,” Assassin whispered, lowering his Mirror Shield. “Follow them, but stay back. If they see us, it's over.”
-The group moved in the shadows, sneaking past flashing computer screens and strange alien technology, keeping their eyes locked on Cobalt's stretcher.
-Suddenly, a cold, metallic voice echoed right behind them.
-“Hey you!”
-Everyone spun around, hearts hammering. Standing right there, staring them dead in the eye, was a heavily armed alien soldier.
+    <p>One day, Cobalt was working at her café when she heard a strange noise outside. Curious, she looked through the window and froze. A UFO was hovering above the town. Suddenly, aliens began pouring out of it.</p>
 
+    <p>"Aliens are attacking!" Cobalt shouted. She immediately spread the word to all her customers. "Everyone leave now!!! Aliens are attacking and you all need to get out of here!!! Don't worry about paying—you never do anyway!!!" The customers quickly ran out of the café in a panic.</p>
 
+    <p>Meanwhile, Assasin was busy writing the sequel to his first book, <i>The Day the Zombies Attacked</i>, so, when he heard the news, without hesitation, he decided to help. "I'll spread the word," he said. He rushed back to his house and then went all around town, warning everyone he could find. Most people were terrified.</p>
 
+    <p>However, Mr. Fun Computer remained surprisingly calm. He was in the middle of writing a review when he heard what was happening. Even so, he stopped what he was doing and helped spread the news.</p>
 
+    <p>Cru5h, a less popular reviewer but still a good one, heard the news as well. Unlike most townspeople, he wasn't focused on running away. "I think we should fight back," he said. The others looked at him. Maybe he had a point.</p>
 
+    <p>They all headed to Bigback67's house because he was a famous gamer and might know something about the aliens. When they arrived, they found him livestreaming a Fortnight match on his channel, Bigback Gaming. Everyone was relieved to see him.</p>
 
+    <p>As it turned out, Bigback67 was also an alien expert. Even better, he had an entire collection of weapons ready to use. "Choose your weapon!" Bigback shouted.</p>
 
-PART 3
-The soldier was jacked, big and had a UFO (Unidentified Fighting Object) in his hand.
-The alien soldier was massive, heavily muscled, and gripped an advanced blaster weapon in his scaly hand.
-“What are you doing here?” the soldier demanded.
-“We are… ummmmmmm… OH YEA! We are spying on you!” Mr. Ham blurted out.
-“HEYYYY! THAT’S NOT NICE!” the alien roared. He roughly grabbed them both by the collar and hauled them away.
-“Why would you say that?!” Kaiden hissed under his breath.
-“I wanted them to capture us so we can find the cobalt!” Mr. Ham whispered back. “Quick, hide your weapons!”
-“Good idea,” CRU5H agreed, stuffing his blaster deep into his coat pocket just in time.
-An instant later, the heavy metal door of the cage slammed shut, locking them inside.
-They found Cobalt sitting in a corner, looking surprisingly calm.
-“Hey guys,” she said, looking up. “I’ve been expecting you.”
-They all stared at her, hoping to get an explanation for how she was so relaxed.
-“I know CRU5H always has good ideas like this,” Cobalt said with a smile.
-The group looked at her, completely amazed that she knew about the secret plan.
-“C’mon guys! How could you be so ignorant?!” she chuckled. “The security cameras are right there!”
-She pointed across the hallway toward a small control room. Inside, a monitor displayed live camera feeds from all over the ship. Right in front of the screen, an alien soldier was snoozing loudly, sleeping just like a classic lazy security guard.
-“I saw CRU5H make the plan on the monitor,” Cobalt explained.
-“Okay, okay,” Kaiden said, looking back at the locked door. “Now let’s make a new plan. How do we get out of here?”
+    <p>Cobalt picked the muffin launcher. As a cook, she knew that aliens hate muffins. Assassin chose a katana and a mirror shield, which could reflect blasts from alien weapons. Bigback decided to join the fight himself, wielding the legendary Minecraft unsmelted iron sword. Plenty of other people showed up to help, but i'll only menti—</p>
 
-PART 4
-The plan was simple... or maybe simply complicated. They needed to get out, and they needed to do it fast. 
+    <p class="interrupted">[The story cuts off here...]</p>
+</div>
 
-The plan was that when the guards went on break, Mr. Fun Computer would sneak into the camera room. He would hack the system so he could watch the monitors from his side, while the aliens would only see a fake, looped recording from earlier. After setting up the loop, he would quickly slip back into the cell and act like nothing happened. Then, they would break out at the perfect moment, take out the remaining guards, infiltrate the ship, and escape without ever sounding the alarm. It was a genius plan.
-
-Immediately, the plan was put into action. The guards left for their lunch break, and Mr. Fun Computer successfully hacked the system to control the cameras. 
-
-When the perfect moment arrived, CRU5H, Kaiden, and Mr. Ham helped Mr. Fun Computer guide the group toward the main part of the ship. Working together, they quickly wiped out all of the guards stationed at the cells. Bigback and Sash decided to stay behind in the prison block to help the other captured townspeople escape. 
-
-But when the rest of the group finally reached the heart of the ship, they froze. An alien admiral was standing there, waiting for them with a massive army, almost as if they knew the reviewers were coming all along...</section>
-    </div>
-    <footer>
-        <p>&copy; 2026 Written by ME. Hosted proudly on GitHub.</p>
-    </footer>
 </body>
 </html>
