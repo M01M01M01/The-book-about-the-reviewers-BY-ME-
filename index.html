@@ -4,68 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Book About the Reviewers</title>
+    <!-- Importing cool gaming and sci-fi fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Orbitron:wght@500;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0d1117;
-            --text-color: #c9d1d9;
-            --accent-color: #58a6ff;
-            --card-bg: #161b22;
-            --border-color: #30363d;
-            --highlight-color: #ff7b72;
+            --bg-color: #050508;
+            --card-bg: rgba(13, 17, 23, 0.85);
+            --accent-neon: #00f0ff; /* Cyberpunk Cyan */
+            --accent-purple: #9d4edd; /* Alien Purple */
+            --text-main: #e2e8f0;
+            --text-muted: #8a99ad;
+            --border-glow: #30363d;
         }
+
+        /* Sci-fi Animated Background Matrix Effect */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-family: 'Space Grotesk', -apple-system, sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(157, 78, 221, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(0, 240, 255, 0.15) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            line-height: 1.7;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             background: var(--card-bg);
-            padding: 40px;
-            border-radius: 6px;
-            border: 1px solid var(--border-color);
+            padding: 50px;
+            border-radius: 16px;
+            border: 1px solid rgba(0, 240, 255, 0.2);
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.05), inset 0 0 20px rgba(157, 78, 221, 0.05);
+            backdrop-filter: blur(12px);
+            position: relative;
+            overflow: hidden;
         }
+
+        /* Cyberpunk Corner Accents */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border-top: 3px solid var(--accent-neon);
+            border-left: 3px solid var(--accent-neon);
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            border-bottom: 3px solid var(--accent-purple);
+            border-right: 3px solid var(--accent-purple);
+        }
+
         h1 {
-            color: var(--accent-color);
-            font-size: 2.5rem;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 10px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 800;
+            color: #fff;
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
             margin-top: 0;
-            text-align: center;
+            margin-bottom: 5px;
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.2);
         }
-        h2 {
-            color: var(--accent-color);
-            font-size: 1.8rem;
-            margin-top: 40px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 5px;
-        }
+
         .meta {
-            font-style: italic;
-            color: #8b949e;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-        .dialogue {
+            font-family: 'Orbitron', sans-serif;
             font-weight: 500;
-            color: #f0f6fc;
+            font-size: 1rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--accent-purple);
+            text-align: center;
+            margin-bottom: 40px;
+            text-shadow: 0 0 8px rgba(157, 78, 221, 0.5);
         }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--accent-neon);
+            font-size: 1.4rem;
+            letter-spacing: 3px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            text-shadow: 0 0 5px rgba(0, 240, 255, 0.4);
+        }
+
+        h2::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background: linear-gradient(to right, var(--accent-neon), transparent);
+            margin-left: 15px;
+        }
+
+        p {
+            font-size: 1.15rem;
+            margin-bottom: 24px;
+            text-align: justify;
+            color: rgba(226, 232, 240, 0.95);
+        }
+
+        /* Dialogue Box Styling */
+        .dialogue {
+            color: #fff;
+            font-weight: 700;
+            background: rgba(0, 240, 255, 0.07);
+            padding: 2px 6px;
+            border-radius: 4px;
+            border-bottom: 1px solid rgba(0, 240, 255, 0.3);
+        }
+
+        /* Dynamic Special Highlight Styles */
+        .weapon {
+            color: #ff9e00;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(255, 158, 0, 0.3);
+        }
+
+        .character {
+            color: #ff007f;
+            font-weight: bold;
+        }
+
+        .alien-voice {
+            font-family: 'Orbitron', sans-serif;
+            color: #39ff14; /* Neon Green */
+            text-shadow: 0 0 8px rgba(57, 255, 20, 0.6);
+            font-weight: bold;
+        }
+
         .cliffhanger {
-            font-style: italic;
-            color: var(--highlight-color);
-            border-left: 3px solid var(--highlight-color);
-            padding-left: 15px;
-            margin-top: 30px;
-            font-size: 1.2rem;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ff3333;
+            text-align: center;
+            border: 1px dashed rgba(255, 51, 51, 0.4);
+            padding: 15px;
+            border-radius: 8px;
+            background: rgba(255, 51, 51, 0.05);
+            margin-top: 40px;
+            font-size: 1.3rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.7; box-shadow: 0 0 0 0 rgba(255, 51, 51, 0.4); }
+            50% { opacity: 1; box-shadow: 0 0 15px 0 rgba(255, 51, 51, 0.2); }
+            100% { opacity: 0.7; box-shadow: 0 0 0 0 rgba(255, 51, 51, 0.4); }
+        }
+
+        /* Custom Scrollbar for modern look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #202630;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-neon);
         }
     </style>
 </head>
@@ -76,74 +195,77 @@
     <div class="meta">Written by ME!</div>
 
     <h2>PART 1</h2>
-    <p>One day, Cobalt was working at her café when she heard a strange noise outside. Curious, she looked through the window and froze. A UFO was hovering above the town. Suddenly, aliens began pouring out of it.</p>
+    <p>One day, <span class="character">Cobalt</span> was working at her café when she heard a strange noise outside. Curious, she looked through the window and froze. A UFO was hovering above the town. Suddenly, aliens began pouring out of it.</p>
     
-    <p><span class="dialogue">"Aliens are attacking!"</span> Cobalt shouted. She immediately spread the word to all her customers. <span class="dialogue">"EVERYONE LEAVE NOW!!! ALIENS ARE ATTACKING AND YOU ALL NEED TO GET OUT OF HERE!!! DON'T WORRY ABOUT PAYING—YOU NEVER DO ANYWAY!!!"</span> The customers quickly ran out of the café in a panic.</p>
+    <p><span class="dialogue">"Aliens are attacking!"</span> <span class="character">Cobalt</span> shouted. She immediately spread the word to all her customers. <span class="dialogue">"EVERYONE LEAVE NOW!!! ALIENS ARE ATTACKING AND YOU ALL NEED TO GET OUT OF HERE!!! DON'T WORRY ABOUT PAYING—YOU NEVER DO ANYWAY!!!"</span> The customers quickly ran out of the café in a panic.</p>
     
-    <p>Meanwhile, Assasin was busy writing the sequel to his first book, <i>The day the Zombies Attacked”</i>, So, when he heard the news. Without hesitation, he decided to help. <span class="dialogue">"I'll spread the word,"</span> he said. He rushed back to his house and then went all around town, warning everyone he could find. Most people were terrified.</p>
+    <p>Meanwhile, <span class="character">Assasin</span> was busy writing the sequel to his first book, <i>The day the Zombies Attacked”</i>, So, when he heard the news. Without hesitation, he decided to help. <span class="dialogue">"I'll spread the word,"</span> he said. He rushed back to his house and then went all around town, warning everyone he could find. Most people were terrified.</p>
     
-    <p>However, Mr. Fun Computer remained surprisingly calm. He was in the middle of writing a review when he heard what was happening. Even so, he stopped what he was doing and helped spread the news.</p>
+    <p>However, <span class="character">Mr. Fun Computer</span> remained surprisingly calm. He was in the middle of writing a review when he heard what was happening. Even so, he stopped what he was doing and helped spread the news.</p>
     
-    <p>CRU5H, a less popular reviewer but still a good one, heard the news as well. Unlike most townspeople, he wasn't focused on running away. <span class="dialogue">"I think we should fight back,"</span> he said. The others looked at him. Maybe he had a point.</p>
+    <p><span class="character">CRU5H</span>, a less popular reviewer but still a good one, heard the news as well. Unlike most townspeople, he wasn't focused on running away. <span class="dialogue">"I think we should fight back,"</span> he said. The others looked at him. Maybe he had a point.</p>
     
-    <p>They all headed to Bigback67's house because he was a famous gamer and might know something about the aliens. When they arrived, they found him livestreaming a Fortnight match on his channel, Bigback Gaming. Everyone was relieved to see him. As it turned out, Bigback67 was also an alien expert. Even better, he had an entire collection of weapons ready to use. <span class="dialogue">"Choose your weapon!"</span> Bigback shouted.</p>
+    <p>They all headed to <span class="character">Bigback67's</span> house because he was a famous gamer and might know something about the aliens. When they arrived, they found him livestreaming a Fortnight match on his channel, Bigback Gaming. Everyone was relieved to see him. As it turned out, <span class="character">Bigback67</span> was also an alien expert. Even better, he had an entire collection of weapons ready to use. <span class="dialogue">"Choose your weapon!"</span> Bigback shouted.</p>
     
-    <p>Cobalt picked the Muffin Launcher. As a cook, she knew that aliens hate muffins. Assassin chose a katana and a Mirror Shield, which could reflect blasts from alien weapons. Bigback decided to join the fight himself, wielding the legendary Minecraft Unsmelted Iron Sword.</p>
+    <p><span class="character">Cobalt</span> picked the <span class="weapon">Muffin Launcher</span>. As a cook, she knew that aliens hate muffins. <span class="character">Assassin</span> chose a <span class="weapon">katana</span> and a <span class="weapon">Mirror Shield</span>, which could reflect blasts from alien weapons. <span class="character">Bigback</span> decided to join the fight himself, wielding the legendary <span class="weapon">Minecraft Unsmelted Iron Sword</span>.</p>
     
-    <p>Plenty of other people showed up to help, but I'll only mention the important ones. Me (because I wrote the book) arrived carrying the Big Nate Obliterator. Why? Because Big Nate is way too tuff for any alien to handle. Mr. Ham grabbed the Piganator. Mr. Fun Computer chose the Hacker. Kaiden picked the Helpful Blaster, powered by Helpfuls. Sash carried the Kobo Bazooka (nobody really knew how it worked, but it looked awesome). Many others joined the team as well.</p>
+    <p>Plenty of other people showed up to help, but I'll only mention the important ones. <span class="character">Me</span> (because I wrote the book) arrived carrying the <span class="weapon">Big Nate Obliterator</span>. Why? Because Big Nate is way too tuff for any alien to handle. <span class="character">Mr. Ham</span> grabbed the <span class="weapon">Piganator</span>. <span class="character">Mr. Fun Computer</span> chose the <span class="weapon">Hacker</span>. <span class="character">Kaiden</span> picked the <span class="weapon">Helpful Blaster</span>, powered by Helpfuls. <span class="character">Sash</span> carried the <span class="weapon">Kobo Bazooka</span> (nobody really knew how it worked, but it looked awesome). Many others joined the team as well.</p>
     
     <p>The group marched out of Bigback's house. In their heads, it felt like Thunderstruck by AC/DC was blasting as they walked in slow motion like they were in an epic edit. Suddenly, an alien leaped out from behind them! Before anyone could react, it grabbed Cobalt and carried her away into the darkness. <span class="dialogue">"COBALT!"</span> everyone shouted.</p>
 
     <h2>PART 2</h2>
-    <p>The group froze in shock, the epic AC/DC music fading in their heads like a scratched record. Cobalt, their primary source of anti-alien muffin defense, was gone. <span class="dialogue">"We need a plan, and we need it now!"</span> Assasin yelled, drawing his katana. The blade caught the eerie green glow of the UFO above.</p>
+***
+
+### 📋 Block 2: Copy this right after the first block
+```html
+    <p><span class="dialogue">"My stream chat is going wild!"</span> <span class="character">Bigback67</span> shouted, holding up his phone. <span class="dialogue">"They're saying the aliens took her toward the town square! They're setting up a main base there!"</span></p>
     
-    <p><span class="dialogue">"My stream chat is going wild!"</span> Bigback67 shouted, holding up his phone. <span class="dialogue">"They're saying the aliens took her toward the town square! They're setting up a main base there!"</span></p>
-    
-    <p><span class="dialogue">"Then that's where we go,"</span> CRU5H said, gripping the Big Nate Obliterator. <span class="dialogue">"Nobody kidnaps our barista. Let's move!"</span></p>
+    <p><span class="dialogue">"Then that's where we go,"</span> <span class="character">CRU5H</span> said, gripping the <span class="weapon">Big Nate Obliterator</span>. <span class="dialogue">"Nobody kidnaps our barista. Let's move!"</span></p>
     
     <p>The group sprinted into the heart of the city, and the scene was absolute chaos. Aliens were flooding the streets like a broken fire hydrant, and the sound of terrified townspeople screaming filled the air. <span class="dialogue">“HELP ME!!!”</span> someone yelled from an overturned car. Towering over the skyscrapers was the giant mothership UFO. Buzzing around it like angry hornets were dozens of smaller shuttle UFOs, hauling up stolen Earth supplies—and captured people.</p>
     
-    <p>Suddenly, Mr. Ham squinted, his eyes locking onto one specific shuttle rising rapidly into the sky. Through the glass cockpit, a familiar apron was visible. <span class="dialogue">“COBALT'S IN THERE!”</span> Mr. Ham yelled, pointing his Piganator at the sky. <span class="dialogue">“LET’S GO! AS FAST AS WE CAN!”</span></p>
+    <p>Suddenly, <span class="character">Mr. Ham</span> squinted, his eyes locking onto one specific shuttle rising rapidly into the sky. Through the glass cockpit, a familiar apron was visible. <span class="dialogue">“COBALT'S IN THERE!”</span> <span class="character">Mr. Ham</span> yelled, pointing his <span class="weapon">Piganator</span> at the sky. <span class="dialogue">“LET’S GO! AS FAST AS WE CAN!”</span></p>
     
-    <p><span class="dialogue">“Everyone, get in the car!”</span> Bigback67 ordered, pointing to a nearby Jurassic park like jeep that was already starting to lift off the ground. The tractor beaming from the giant UFO gripped the vehicle, pulling it up into the sky like a giant, invisible elevator. They buckled up just as the car flew through the hangar doors and slammed down right in the glowing, high-tech core of the main mothership.</p>
+    <p><span class="dialogue">“Everyone, get in the car!”</span> <span class="character">Bigback67</span> ordered, pointing to a nearby Jurassic park like jeep that was already starting to lift off the ground. The tractor beaming from the giant UFO gripped the vehicle, pulling it up into the sky like a giant, invisible elevator. They buckled up just as the car flew through the hangar doors and slammed down right in the glowing, high-tech core of the main mothership.</p>
     
-    <p>They scrambled out of the car, weapons ready. Looking down a long, metallic hallway, they spotted Cobalt. She was trapped on a hovering stretcher, being pulled away by a couple of alien guards. <span class="dialogue">“There she is,”</span> Assassin whispered, lowering his Mirror Shield. <span class="dialogue">“Follow them, but stay back. If they see us, it's over.”</span></p>
+    <p>They scrambled out of the car, weapons ready. Looking down a long, metallic hallway, they spotted <span class="character">Cobalt</span>. She was trapped on a hovering stretcher, being pulled away by a couple of alien guards. <span class="dialogue">“There she is,”</span> <span class="character">Assassin</span> whispered, lowering his <span class="weapon">Mirror Shield</span>. <span class="dialogue">“Follow them, but stay back. If they see us, it's over.”</span></p>
     
-    <p>The group moved in the shadows, sneaking past flashing computer screens and strange alien technology, keeping their eyes locked on Cobalt's stretcher. Suddenly, a cold, metallic voice echoed right behind them. <span class="dialogue">“Hey you!”</span> Everyone spun around, hearts hammering. Standing right there, staring them dead in the eye, was a heavily armed alien soldier.</p>
+    <p>The group moved in the shadows, sneaking past flashing computer screens and strange alien technology, keeping their eyes locked on Cobalt's stretcher. Suddenly, a cold, metallic voice echoed right behind them. <span class="alien-voice">“Hey you!”</span> Everyone spun around, hearts hammering. Standing right there, staring them dead in the eye, was a heavily armed alien soldier.</p>
+
     <h2>PART 3</h2>
-    <p>The soldier was jacked, big and had a UFO (Unidentified Fighting Object) in his hand. The alien soldier was massive, heavily muscled, and gripped an advanced blaster weapon in his scaly hand. <span class="dialogue">“What are you doing here?”</span> the soldier demanded.</p>
+    <p>The soldier was jacked, big and had a UFO (Unidentified Fighting Object) in his hand. The alien soldier was massive, heavily muscled, and gripped an advanced blaster weapon in his scaly hand. <span class="alien-voice">“What are you doing here?”</span> the soldier demanded.</p>
     
-    <p><span class="dialogue">“We are… ummmmmmm… OH YEA! We are spying on you!”</span> Mr. Ham blurted out.</p>
+    <p><span class="dialogue">“We are… ummmmmmm… OH YEA! We are spying on you!”</span> <span class="character">Mr. Ham</span> blurted out.</p>
     
-    <p><span class="dialogue">“HEYYYY! THAT’S NOT NICE!”</span> the alien roared. He roughly grabbed them both by the collar and hauled them away.</p>
+    <p><span class="alien-voice">“HEYYYY! THAT’S NOT NICE!”</span> the alien roared. He roughly grabbed them both by the collar and hauled them away.</p>
     
-    <p><span class="dialogue">“Why would you say that?!”</span> Kaiden hissed under his breath.</p>
+    <p><span class="dialogue">“Why would you say that?!”</span> <span class="character">Kaiden</span> hissed under his breath.</p>
     
-    <p><span class="dialogue">“I wanted them to capture us so we can find the cobalt!”</span> Mr. Ham whispered back. <span class="dialogue">“Quick, hide your weapons!”</span></p>
+    <p><span class="dialogue">“I wanted them to capture us so we can find the cobalt!”</span> <span class="character">Mr. Ham</span> whispered back. <span class="dialogue">“Quick, hide your weapons!”</span></p>
     
-    <p><span class="dialogue">“Good idea,”</span> CRU5H agreeed, stuffing his blaster deep into his coat pocket just in time.</p>
+    <p><span class="dialogue">“Good idea,”</span> <span class="character">CRU5H</span> agreed, stuffing his blaster deep into his coat pocket just in time.</p>
     
-    <p>An instant later, the heavy metal door of the cage slammed shut, locking them inside. They found Cobalt sitting in a corner, looking surprisingly calm. <span class="dialogue">“Hey guys,”</span> she said, looking up. <span class="dialogue">“I’ve been expecting you.”</span> They all stared at her, hoping to get an explanation for how she was so relaxed.</p>
+    <p>An instant later, the heavy metal door of the cage slammed shut, locking them inside. They found <span class="character">Cobalt</span> sitting in a corner, looking surprisingly calm. <span class="dialogue">“Hey guys,”</span> she said, looking up. <span class="dialogue">“I’ve been expecting you.”</span> They all stared at her, hoping to get an explanation for how she was so relaxed.</p>
     
-    <p><span class="dialogue">“I know CRU5H always has good ideas like this,”</span> Cobalt said with a smile. The group looked at her, completely amazed that she knew about the secret plan. <span class="dialogue">“C’mon guys! How could you be so ignorant?!”</span> she chuckled. <span class="dialogue">“The security cameras are right there!”</span></p>
+    <p><span class="dialogue">“I know CRU5H always has good ideas like this,”</span> <span class="character">Cobalt</span> said with a smile. The group looked at her, completely amazed that she knew about the secret plan. <span class="dialogue">“C’mon guys! How could you be some ignorant?!”</span> she chuckled. <span class="dialogue">“The security cameras are right there!”</span></p>
     
-    <p>She pointed across the hallway toward a small control room. Inside, a monitor displayed live camera feeds from all over the ship. Right in front of the screen, an alien soldier was snoozing loudly, sleeping just like a classic lazy security guard. <span class="dialogue">“I saw CRU5H make the plan on the monitor,”</span> Cobalt explained.</p>
+    <p>She pointed across the hallway toward a small control room. Inside, a monitor displayed live camera feeds from all over the ship. Right in front of the screen, an alien soldier was snoozing loudly, sleeping just like a classic lazy security guard. <span class="dialogue">“I saw CRU5H make the plan on the monitor,”</span> <span class="character">Cobalt</span> explained.</p>
     
-    <p><span class="dialogue">“Okay, okay,”</span> Kaiden said, looking back at the locked door. <span class="dialogue">“Now let’s make a new plan. How do we get out of here?”</span></p>
+    <p><span class="dialogue">“Okay, okay,”</span> <span class="character">Kaiden</span> said, looking back at the locked door. <span class="dialogue">“Now let’s make a new plan. How do we get out of here?”</span></p>
 
     <h2>PART 4</h2>
     <p>The plan was simple... or maybe simply complicated. They needed to get out, and they needed to do it fast.</p>
     
-    <p>The plan was that when the guards went on break, Mr. Fun Computer would sneak into the camera room. He would hack the system so he could watch the monitors from his side, while the aliens would only see a fake, looped recording from earlier. After setting up the loop, he would quickly slip back into the cell and act like nothing happened. Then, they would break out at the perfect moment, take out the remaining guards, infiltrate the ship, and escape without ever sounding the alarm. It was a genius plan.</p>
+    <p>The plan was that when the guards went on break, <span class="character">Mr. Fun Computer</span> would sneak into the camera room. He would hack the system so he could watch the monitors from his side, while the aliens would only see a fake, looped recording from earlier. After setting up the loop, he would quickly slip back into the cell and act like nothing happened. Then, they would break out at the perfect moment, take out the remaining guards, infiltrate the ship, and escape without ever sounding the alarm. It was a genius plan.</p>
     
-    <p>Immediately, the plan was put into action. The guards left for their lunch break, and Mr. Fun Computer successfully hacked the system to control the cameras.</p>
+    <p>Immediately, the plan was put into action. The guards left for their lunch break, and <span class="character">Mr. Fun Computer</span> successfully hacked the system to control the cameras.</p>
     
-    <p>When the perfect moment arrived, CRU5H, Kaiden, and Mr. Ham helped Mr. Fun Computer guide the group toward the main part of the ship. Working together, they quickly wiped out all of the guards stationed at the cells. Bigback and Sash decided to stay behind in the prison block to help the other captured townspeople escape.</p>
+    <p>When the perfect moment arrived, <span class="character">CRU5H</span>, <span class="character">Kaiden</span>, and <span class="character">Mr. Ham</span> helped <span class="character">Mr. Fun Computer</span> guide the group toward the main part of the ship. Working together, they quickly wiped out all of the guards stationed at the cells. <span class="character">Bigback</span> and <span class="character">Sash</span> decided to stay behind in the prison block to help the other captured townspeople escape.</p>
     
     <p>But when the rest of the group finally reached the heart of the ship, they froze. An alien admiral was standing there, waiting for them with a massive army, almost as if they knew the reviewers were coming all along...</p>
 
     <h2>PART 5</h2>
-    <p class="cliffhanger">To be continued...</p>
+    <div class="cliffhanger">⚠️ WARNING: CHAPTER NOT FOUND. INCOMING BATTLE DATA PENDING...</div>
 </div>
 
 </body>
